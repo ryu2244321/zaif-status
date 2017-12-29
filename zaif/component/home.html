@@ -1,0 +1,14 @@
+<div id="wrap">
+
+  <div id="btns">
+    <div class="btn" @click="send(1)" data-btnId="1"></div>
+    <div class="btn" @click="send(2)" data-btnId="2"></div>
+    <div class="btn" @click="send(3)" data-btnId="3"></div>
+    <div class="btn" @click="send(4)" data-btnId="4"></div>
+  </div>
+  <div id="balloons">
+    <div class="balloon" v-for="b in balloons" :class="'b'+b.id"
+         :style="{left:b.left+'px',top:b.top+'px'}"></div>
+  </div>
+  <div id="clicks">{{clicks}}</div>
+</div>
