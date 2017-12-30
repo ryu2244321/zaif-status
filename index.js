@@ -89,7 +89,7 @@ setInterval(()=>{
 },1000*60)
 
 function connect(){
-  const WebSocket = require('ws');
+  const WebSocket = require('uws');
 
   const ws = new WebSocket('ws://ws.zaif.jp/stream?currency_pair=mona_jpy');
 
