@@ -15010,7 +15010,7 @@ exports = module.exports = __webpack_require__(33)(undefined);
 
 
 // module
-exports.push([module.i, "#btns {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  text-align: center;\n  z-index: 10; }\n  #btns .btn {\n    display: inline-block;\n    width: 100px;\n    height: 100px;\n    border-radius: 50px;\n    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.8);\n    margin: 10px;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-color: white; }\n  #btns [data-btnId=\"1\"] {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #btns [data-btnId=\"2\"] {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #btns [data-btnId=\"3\"] {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #btns [data-btnId=\"4\"] {\n    background-image: url(" + __webpack_require__(15) + "); }\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  -ms-user-select: text; }\n\n#balloons {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0; }\n  #balloons .balloon.b1 {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #balloons .balloon.b2 {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #balloons .balloon.b3 {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #balloons .balloon.b4 {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #balloons .balloon {\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat; }\n", ""]);
+exports.push([module.i, "#btns {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  text-align: center;\n  z-index: 10; }\n  #btns .btn {\n    display: inline-block;\n    width: 100px;\n    height: 100px;\n    border-radius: 50px;\n    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.8);\n    margin: 10px;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-color: white; }\n  #btns [data-btnId=\"1\"] {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #btns [data-btnId=\"2\"] {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #btns [data-btnId=\"3\"] {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #btns [data-btnId=\"4\"] {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #btns #chatInput {\n    display: grid;\n    grid-template-columns: 1fr 3fr 80px;\n    height: 20px; }\n    #btns #chatInput input {\n      width: 100%;\n      height: 20px;\n      font-size: 20px; }\n    #btns #chatInput #sendBtn {\n      color: #fff;\n      background-color: #2196f3; }\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  -ms-user-select: text; }\n\n#balloons {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  z-index: 5; }\n  #balloons .balloon.b1 {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #balloons .balloon.b2 {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #balloons .balloon.b3 {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #balloons .balloon.b4 {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #balloons .balloon {\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat; }\n\n#clicks {\n  position: absolute;\n  top: 0;\n  right: 0;\n  text-align: right;\n  z-index: 10; }\n\n#chats {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  display: table; }\n  #chats .chat:nth-child(2n) {\n    background-color: #ddd; }\n  #chats .chat {\n    display: table-row; }\n    #chats .chat .name {\n      display: table-cell;\n      max-width: 80px;\n      overflow: hidden;\n      white-space: nowrap;\n      word-wrap: normal;\n      word-break: break-word;\n      text-overflow: ellipsis; }\n    #chats .chat .text {\n      display: table-cell; }\n", ""]);
 
 // exports
 
@@ -15572,7 +15572,12 @@ const socket = __webpack_require__(37)
 module.exports=__webpack_require__(63)({
   data:()=>({
     balloons:[],
-    clicks:0
+    clicks:0,
+    chats:[],
+    chatInput:"",
+    monaJpy:{
+      last_price:{}
+    }
   }),
   mounted(){
     socket.on("zaif",id=>{
@@ -15583,12 +15588,23 @@ module.exports=__webpack_require__(63)({
       })
       this.clicks=id.clicks
       if(this.balloons.length>100){
-        this.balloons.pop()
+        this.balloons.shift()
       }
     })
     socket.on("zaifReset",d=>{
       this.balloons=[]
       
+    })
+    socket.on("chat",d=>{
+      this.chats.push(d)
+      if(this.chats.length>20){
+        this.chats.shift()
+      }
+    })
+    socket.on("zaifMonaJpy",d=>{
+      
+      this.monaJpy=JSON.parse(d)
+      console.log(this.monaJpy)
     })
   },
   methods:{
@@ -15600,6 +15616,16 @@ module.exports=__webpack_require__(63)({
     }
     ,setLeft(){
       return Math.random()*window.innerWidth
+    },
+    sendChat(){
+      if(!this.chatInput){
+        return;
+      }
+      socket.emit("chat",{
+        text:this.chatInput,
+        name:this.nameInput
+      })
+      this.chatInput=""
     }
   }
 })
@@ -19205,7 +19231,7 @@ Backoff.prototype.setJitter = function(jitter){
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"wrap"}},[_c('div',{attrs:{"id":"btns"}},[_c('div',{staticClass:"btn",attrs:{"data-btnId":"1"},on:{"click":function($event){_vm.send(1)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"2"},on:{"click":function($event){_vm.send(2)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"3"},on:{"click":function($event){_vm.send(3)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"4"},on:{"click":function($event){_vm.send(4)}}})]),_vm._v(" "),_c('div',{attrs:{"id":"balloons"}},_vm._l((_vm.balloons),function(b){return _c('div',{staticClass:"balloon",class:'b'+b.id,style:({left:b.left+'px',top:b.top+'px'})})})),_vm._v(" "),_c('div',{attrs:{"id":"clicks"}},[_vm._v(_vm._s(_vm.clicks))])])}
+var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"wrap"}},[_c('div',{attrs:{"id":"btns"}},[_c('div',{staticClass:"btn",attrs:{"data-btnId":"1"},on:{"click":function($event){_vm.send(1)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"2"},on:{"click":function($event){_vm.send(2)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"3"},on:{"click":function($event){_vm.send(3)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"4"},on:{"click":function($event){_vm.send(4)}}}),_vm._v(" "),_c('div',{attrs:{"id":"chatInput"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.nameInput),expression:"nameInput"}],attrs:{"name":"nameInput","type":"text","placeholder":"名前"},domProps:{"value":(_vm.nameInput)},on:{"input":function($event){if($event.target.composing){ return; }_vm.nameInput=$event.target.value}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.chatInput),expression:"chatInput"}],attrs:{"name":"chatInput","type":"text","placeholder":"本文"},domProps:{"value":(_vm.chatInput)},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.sendChat($event)},"input":function($event){if($event.target.composing){ return; }_vm.chatInput=$event.target.value}}}),_vm._v(" "),_c('div',{attrs:{"id":"sendBtn"},on:{"click":_vm.sendChat}},[_vm._v("送信")])])]),_vm._v(" "),_c('div',{attrs:{"id":"balloons"}},_vm._l((_vm.balloons),function(b){return _c('div',{staticClass:"balloon",class:'b'+b.id,style:({left:b.left+'px',top:b.top+'px'})})})),_vm._v(" "),_c('div',{attrs:{"id":"clicks"}},[_vm._v(_vm._s(_vm.clicks)+"クリック/秒,"+_vm._s(_vm.monaJpy.last_price.price)+","+_vm._s(_vm.monaJpy.last_price.action))]),_vm._v(" "),_c('div',{attrs:{"id":"chats"}},_vm._l((_vm.chats),function(c){return _c('div',{staticClass:"chat"},[_c('div',{staticClass:"name"},[_vm._v(_vm._s(c.name))]),_vm._v(" "),_c('div',{staticClass:"text"},[_vm._v(_vm._s(c.text))])])}))])}
 var staticRenderFns = []
 module.exports = function (_exports) {
   var options = typeof _exports === 'function'

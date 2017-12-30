@@ -26,6 +26,20 @@ $balloonSize:50px;
       background-image:url(../res/#{$i}.png)
     }
   }
+  #chatInput{
+    display:grid;
+    grid-template-columns: 1fr 3fr 80px;
+    height:20px;
+    input{
+      width:100%;
+      height:20px;
+      font-size:20px;
+    }
+    #sendBtn{
+      color: #fff;
+      background-color:#2196f3;
+    }
+  }
 }
 html,body{
   width:100%;
@@ -47,6 +61,7 @@ html,body{
   left:0;
   margin:0;
   padding: 0;
+  z-index:5;
   @for $i from 1 through 4 {
     .balloon.b#{$i} {
       background-image:url(../res/#{$i}.png)
@@ -60,5 +75,37 @@ html,body{
     background-size:contain;
     background-repeat:no-repeat;
     
+  }
+}
+#clicks{
+  position: absolute;
+  top:0;
+  right:0;
+  text-align:right;
+  z-index:10;
+}
+#chats{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  display:table;
+  .chat:nth-child(2n){
+    background-color:#ddd;
+  }
+  .chat{
+    display:table-row;
+    .name{
+      display:table-cell;
+      max-width:80px;
+      overflow:hidden;
+      white-space: nowrap;
+      word-wrap: normal;
+      word-break: break-word;
+      text-overflow: ellipsis;
+    }
+    .text{
+      display:table-cell;
+    }
   }
 }
