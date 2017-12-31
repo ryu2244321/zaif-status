@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 27);
+/******/ 	return __webpack_require__(__webpack_require__.s = 28);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -268,7 +268,7 @@ Emitter.prototype.hasListeners = function(event){
  */
 
 var keys = __webpack_require__(50);
-var hasBinary = __webpack_require__(17);
+var hasBinary = __webpack_require__(18);
 var sliceBuffer = __webpack_require__(51);
 var after = __webpack_require__(52);
 var utf8 = __webpack_require__(53);
@@ -1670,9 +1670,9 @@ function plural(ms, n, name) {
 
 var debug = __webpack_require__(41)('socket.io-parser');
 var Emitter = __webpack_require__(1);
-var hasBin = __webpack_require__(17);
+var hasBin = __webpack_require__(18);
 var binary = __webpack_require__(44);
-var isBuf = __webpack_require__(18);
+var isBuf = __webpack_require__(19);
 
 /**
  * Protocol version.
@@ -2298,6 +2298,19 @@ module.exports = __webpack_require__.p + "dist/assets/477c2309d402c434e1e4665d87
 
 /***/ }),
 /* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const io = __webpack_require__(38)
+const socket = module.exports = io({
+  serveClient:false
+});
+socket.on('zaif', function (data) {
+  
+});
+
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports) {
 
 /**
@@ -2342,7 +2355,7 @@ module.exports = function parseuri(str) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/* global Blob File */
@@ -2411,7 +2424,7 @@ function hasBinary (obj) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -2431,7 +2444,7 @@ function isBuf(obj) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -2440,13 +2453,13 @@ function isBuf(obj) {
  */
 
 var eio = __webpack_require__(46);
-var Socket = __webpack_require__(24);
+var Socket = __webpack_require__(25);
 var Emitter = __webpack_require__(1);
 var parser = __webpack_require__(9);
-var on = __webpack_require__(25);
-var bind = __webpack_require__(26);
+var on = __webpack_require__(26);
+var bind = __webpack_require__(27);
 var debug = __webpack_require__(4)('socket.io-client:manager');
-var indexOf = __webpack_require__(23);
+var indexOf = __webpack_require__(24);
 var Backoff = __webpack_require__(62);
 
 /**
@@ -3010,7 +3023,7 @@ Manager.prototype.onreconnect = function () {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -3070,7 +3083,7 @@ function polling (opts) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -3081,7 +3094,7 @@ var Transport = __webpack_require__(11);
 var parseqs = __webpack_require__(5);
 var parser = __webpack_require__(2);
 var inherit = __webpack_require__(6);
-var yeast = __webpack_require__(22);
+var yeast = __webpack_require__(23);
 var debug = __webpack_require__(7)('engine.io-client:polling');
 
 /**
@@ -3321,7 +3334,7 @@ Polling.prototype.uri = function () {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3396,7 +3409,7 @@ module.exports = yeast;
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 
@@ -3411,7 +3424,7 @@ module.exports = function(arr, obj){
 };
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -3422,8 +3435,8 @@ module.exports = function(arr, obj){
 var parser = __webpack_require__(9);
 var Emitter = __webpack_require__(1);
 var toArray = __webpack_require__(61);
-var on = __webpack_require__(25);
-var bind = __webpack_require__(26);
+var on = __webpack_require__(26);
+var bind = __webpack_require__(27);
 var debug = __webpack_require__(4)('socket.io-client:socket');
 var parseqs = __webpack_require__(5);
 
@@ -3835,7 +3848,7 @@ Socket.prototype.compress = function (compress) {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 
@@ -3865,7 +3878,7 @@ function on (obj, ev, fn) {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 /**
@@ -3894,27 +3907,29 @@ module.exports = function(obj, fn){
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const Vue = __webpack_require__(28)
-__webpack_require__(31)
+const Vue = __webpack_require__(29)
+__webpack_require__(32)
 exports.vm= new Vue({
   el:"#app",
-  render(h){
-    return h("home")
-  },
+  
   data(){
-    return {}
+    return {
+      tab:"home"
+    }
   },
   components:{
-    home:__webpack_require__(36)
+    home:__webpack_require__(37),
+    tweet:__webpack_require__(64),
+    board:__webpack_require__(66)
   }
 })
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
@@ -14716,10 +14731,10 @@ return Vue$3;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(29).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(30).setImmediate))
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -14772,13 +14787,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(30);
+__webpack_require__(31);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -14971,13 +14986,13 @@ exports.clearImmediate = clearImmediate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(3)))
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(32);
+var content = __webpack_require__(33);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -14985,7 +15000,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(34)(content, options);
+var update = __webpack_require__(35)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -15002,21 +15017,21 @@ if(false) {
 }
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(33)(undefined);
+exports = module.exports = __webpack_require__(34)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "#btns {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  text-align: center;\n  z-index: 10; }\n  #btns .btn {\n    display: inline-block;\n    width: 100px;\n    height: 100px;\n    border-radius: 50px;\n    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.8);\n    margin: 10px;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-color: white; }\n  #btns [data-btnId=\"1\"] {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #btns [data-btnId=\"2\"] {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #btns [data-btnId=\"3\"] {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #btns [data-btnId=\"4\"] {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #btns #chatInput {\n    display: grid;\n    grid-template-columns: 1fr 3fr 80px;\n    height: 20px; }\n    #btns #chatInput input {\n      width: 100%;\n      height: 20px;\n      font-size: 20px; }\n    #btns #chatInput #sendBtn {\n      color: #fff;\n      background-color: #2196f3; }\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  -ms-user-select: text; }\n\n#balloons {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  z-index: 5; }\n  #balloons .balloon.b1 {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #balloons .balloon.b2 {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #balloons .balloon.b3 {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #balloons .balloon.b4 {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #balloons .balloon {\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat; }\n\n#clicks {\n  position: absolute;\n  top: 0;\n  right: 0;\n  text-align: right;\n  z-index: 10; }\n\n#chats {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  display: table; }\n  #chats .chat:nth-child(2n) {\n    background-color: #ddd; }\n  #chats .chat {\n    display: table-row; }\n    #chats .chat .name {\n      display: table-cell;\n      max-width: 80px;\n      overflow: hidden;\n      white-space: nowrap;\n      word-wrap: normal;\n      word-break: break-word;\n      text-overflow: ellipsis; }\n    #chats .chat .text {\n      display: table-cell; }\n", ""]);
+exports.push([module.i, "#btns {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  text-align: center;\n  z-index: 10; }\n  #btns .btn {\n    display: inline-block;\n    width: 100px;\n    height: 100px;\n    border-radius: 50px;\n    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.8);\n    margin: 10px;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-color: white; }\n  #btns [data-btnId=\"1\"] {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #btns [data-btnId=\"2\"] {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #btns [data-btnId=\"3\"] {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #btns [data-btnId=\"4\"] {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #btns #chatInput {\n    display: grid;\n    grid-template-columns: 1fr 3fr 80px;\n    height: 20px; }\n    #btns #chatInput input {\n      width: 100%;\n      height: 20px;\n      font-size: 20px; }\n    #btns #chatInput #sendBtn {\n      color: #fff;\n      background-color: #2196f3; }\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  -ms-user-select: text; }\n\n#balloons {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 100px;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  z-index: 5; }\n  #balloons .balloon.b1 {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #balloons .balloon.b2 {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #balloons .balloon.b3 {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #balloons .balloon.b4 {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #balloons .balloon {\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat; }\n\n#clicks {\n  position: absolute;\n  top: 0;\n  right: 0;\n  text-align: right;\n  z-index: 10; }\n\n#chats {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  display: table; }\n  #chats .chat:nth-child(2n) {\n    background-color: #ddd; }\n  #chats .chat {\n    display: table-row; }\n    #chats .chat .name {\n      display: table-cell;\n      max-width: 80px;\n      overflow: hidden;\n      white-space: nowrap;\n      word-wrap: normal;\n      word-break: break-word;\n      text-overflow: ellipsis; }\n    #chats .chat .text {\n      display: table-cell; }\n\n#tab {\n  z-index: 101; }\n  #tab div {\n    display: inline-block; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 /*
@@ -15098,7 +15113,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -15154,7 +15169,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(35);
+var	fixUrls = __webpack_require__(36);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -15470,7 +15485,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 
@@ -15565,10 +15580,10 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const socket = __webpack_require__(37)
+const socket = __webpack_require__(16)
 module.exports=__webpack_require__(63)({
   data:()=>({
     balloons:[],
@@ -15632,19 +15647,6 @@ module.exports=__webpack_require__(63)({
 
 
 /***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-const io = __webpack_require__(38)
-const socket = module.exports = io({
-  serveClient:false
-});
-socket.on('zaif', function (data) {
-  
-});
-
-
-/***/ }),
 /* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15655,7 +15657,7 @@ socket.on('zaif', function (data) {
 
 var url = __webpack_require__(39);
 var parser = __webpack_require__(9);
-var Manager = __webpack_require__(19);
+var Manager = __webpack_require__(20);
 var debug = __webpack_require__(4)('socket.io-client');
 
 /**
@@ -15740,8 +15742,8 @@ exports.connect = lookup;
  * @api public
  */
 
-exports.Manager = __webpack_require__(19);
-exports.Socket = __webpack_require__(24);
+exports.Manager = __webpack_require__(20);
+exports.Socket = __webpack_require__(25);
 
 
 /***/ }),
@@ -15753,7 +15755,7 @@ exports.Socket = __webpack_require__(24);
  * Module dependencies.
  */
 
-var parseuri = __webpack_require__(16);
+var parseuri = __webpack_require__(17);
 var debug = __webpack_require__(4)('socket.io-client:url');
 
 /**
@@ -16456,7 +16458,7 @@ module.exports = Array.isArray || function (arr) {
  */
 
 var isArray = __webpack_require__(45);
-var isBuf = __webpack_require__(18);
+var isBuf = __webpack_require__(19);
 var toString = Object.prototype.toString;
 var withNativeBlob = typeof global.Blob === 'function' || toString.call(global.Blob) === '[object BlobConstructor]';
 var withNativeFile = typeof global.File === 'function' || toString.call(global.File) === '[object FileConstructor]';
@@ -16628,12 +16630,12 @@ module.exports.parser = __webpack_require__(2);
  * Module dependencies.
  */
 
-var transports = __webpack_require__(20);
+var transports = __webpack_require__(21);
 var Emitter = __webpack_require__(1);
 var debug = __webpack_require__(7)('engine.io-client:socket');
-var index = __webpack_require__(23);
+var index = __webpack_require__(24);
 var parser = __webpack_require__(2);
-var parseuri = __webpack_require__(16);
+var parseuri = __webpack_require__(17);
 var parseqs = __webpack_require__(5);
 
 /**
@@ -16768,7 +16770,7 @@ Socket.protocol = parser.protocol; // this is an int
 
 Socket.Socket = Socket;
 Socket.Transport = __webpack_require__(11);
-Socket.transports = __webpack_require__(20);
+Socket.transports = __webpack_require__(21);
 Socket.parser = __webpack_require__(2);
 
 /**
@@ -17402,7 +17404,7 @@ try {
  */
 
 var XMLHttpRequest = __webpack_require__(10);
-var Polling = __webpack_require__(21);
+var Polling = __webpack_require__(22);
 var Emitter = __webpack_require__(1);
 var inherit = __webpack_require__(6);
 var debug = __webpack_require__(7)('engine.io-client:polling-xhr');
@@ -18589,7 +18591,7 @@ function coerce(val) {
  * Module requirements.
  */
 
-var Polling = __webpack_require__(21);
+var Polling = __webpack_require__(22);
 var inherit = __webpack_require__(6);
 
 /**
@@ -18830,7 +18832,7 @@ var Transport = __webpack_require__(11);
 var parser = __webpack_require__(2);
 var parseqs = __webpack_require__(5);
 var inherit = __webpack_require__(6);
-var yeast = __webpack_require__(22);
+var yeast = __webpack_require__(23);
 var debug = __webpack_require__(7)('engine.io-client:websocket');
 var BrowserWebSocket = global.WebSocket || global.MozWebSocket;
 var NodeWebSocket;
@@ -19231,7 +19233,7 @@ Backoff.prototype.setJitter = function(jitter){
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"wrap"}},[_c('div',{attrs:{"id":"btns"}},[_c('div',{staticClass:"btn",attrs:{"data-btnId":"1"},on:{"click":function($event){_vm.send(1)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"2"},on:{"click":function($event){_vm.send(2)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"3"},on:{"click":function($event){_vm.send(3)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"4"},on:{"click":function($event){_vm.send(4)}}}),_vm._v(" "),_c('div',{attrs:{"id":"chatInput"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.nameInput),expression:"nameInput"}],attrs:{"name":"nameInput","type":"text","placeholder":"名前"},domProps:{"value":(_vm.nameInput)},on:{"input":function($event){if($event.target.composing){ return; }_vm.nameInput=$event.target.value}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.chatInput),expression:"chatInput"}],attrs:{"name":"chatInput","type":"text","placeholder":"本文"},domProps:{"value":(_vm.chatInput)},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.sendChat($event)},"input":function($event){if($event.target.composing){ return; }_vm.chatInput=$event.target.value}}}),_vm._v(" "),_c('div',{attrs:{"id":"sendBtn"},on:{"click":_vm.sendChat}},[_vm._v("送信")])])]),_vm._v(" "),_c('div',{attrs:{"id":"balloons"}},_vm._l((_vm.balloons),function(b){return _c('div',{staticClass:"balloon",class:'b'+b.id,style:({left:b.left+'px',top:b.top+'px'})})})),_vm._v(" "),_c('div',{attrs:{"id":"clicks"}},[_vm._v(_vm._s(_vm.clicks)+"クリック/秒,"+_vm._s(_vm.monaJpy.last_price.price)+","+_vm._s(_vm.monaJpy.last_price.action))]),_vm._v(" "),_c('div',{attrs:{"id":"chats"}},_vm._l((_vm.chats),function(c){return _c('div',{staticClass:"chat"},[_c('div',{staticClass:"name"},[_vm._v(_vm._s(c.name))]),_vm._v(" "),_c('div',{staticClass:"text"},[_vm._v(_vm._s(c.text))])])}))])}
+var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"wrap"}},[_c('div',{attrs:{"id":"btns"}},[_c('div',{staticClass:"btn",attrs:{"data-btnId":"1"},on:{"click":function($event){_vm.send(1)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"2"},on:{"click":function($event){_vm.send(2)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"3"},on:{"click":function($event){_vm.send(3)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"4"},on:{"click":function($event){_vm.send(4)}}}),_vm._v(" "),_c('div',{attrs:{"id":"chatInput"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.nameInput),expression:"nameInput"}],attrs:{"name":"nameInput","type":"text","placeholder":"名前"},domProps:{"value":(_vm.nameInput)},on:{"input":function($event){if($event.target.composing){ return; }_vm.nameInput=$event.target.value}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.chatInput),expression:"chatInput"}],attrs:{"name":"chatInput","type":"text","placeholder":"本文"},domProps:{"value":(_vm.chatInput)},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.sendChat($event)},"input":function($event){if($event.target.composing){ return; }_vm.chatInput=$event.target.value}}}),_vm._v(" "),_c('div',{attrs:{"id":"sendBtn"},on:{"click":_vm.sendChat}},[_vm._v("送信")])])]),_vm._v(" "),_c('div',{attrs:{"id":"balloons"}},_vm._l((_vm.balloons),function(b){return _c('div',{staticClass:"balloon",class:'b'+b.id,style:({left:b.left+'px',top:b.top+'px'})})})),_vm._v(" "),_c('div',{attrs:{"id":"clicks"}},[_vm._v(_vm._s(_vm.clicks)+"クリック/分,"+_vm._s(_vm.monaJpy.last_price.price)+","+_vm._s(_vm.monaJpy.last_price.action))]),_vm._v(" "),_c('div',{attrs:{"id":"chats"}},_vm._l((_vm.chats),function(c){return _c('div',{staticClass:"chat"},[_c('div',{staticClass:"name"},[_vm._v(_vm._s(c.name))]),_vm._v(" "),_c('div',{staticClass:"text"},[_vm._v(_vm._s(c.text))])])}))])}
 var staticRenderFns = []
 module.exports = function (_exports) {
   var options = typeof _exports === 'function'
@@ -19252,6 +19254,93 @@ if (false) {(function () {
   module.hot.accept()
   if (module.hot.data) {
     api.rerender("data-v-c177dc32", { render: render, staticRenderFns: staticRenderFns })
+  }
+})()}
+
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports=__webpack_require__(65)({
+  data:()=>({
+    tweets:["502 Bad Gatewayキター","安定のZaif","注文通らない訴訟","いつものZaifで安心したわwwww","朝山金返せ!"]
+  })
+})
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("ツイートする")]),_vm._v(" "),_vm._l((_vm.tweets),function(i){return _c('div',[_c('a',{attrs:{"target":"_blank","href":'https://twitter.com/share?url=https://zaif-status.herokuapp.com/zaif&text='+i}},[_vm._v(_vm._s(i))])])})],2)}
+var staticRenderFns = []
+module.exports = function (_exports) {
+  var options = typeof _exports === 'function'
+    ? _exports.options
+    : _exports
+  options.render = render
+  options.staticRenderFns = staticRenderFns
+  if (false) {
+    api.createRecord("data-v-d7f3cfca", options)
+  }
+  return _exports
+}
+var api = null
+if (false) {(function () {
+  api = require("vue-hot-reload-api")
+  api.install(require("vue"))
+  if (!api.compatible) return
+  module.hot.accept()
+  if (module.hot.data) {
+    api.rerender("data-v-d7f3cfca", { render: render, staticRenderFns: staticRenderFns })
+  }
+})()}
+
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const socket = __webpack_require__(16)
+module.exports=__webpack_require__(67)({
+  data:()=>({
+    b:{}
+  }),
+  mounted(){
+    socket.on("zaifBoard",d=>{
+      const c=JSON.parse(d)
+      this.$set(this.b,c.currency_pair,c)
+    })
+  }
+})
+
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"board"}},_vm._l((_vm.b),function(v,k){return _c('div',{attrs:{"id":"pairs"}},[_c('div',{staticClass:"pair"},[_vm._v(_vm._s(v.currency_pair))]),_vm._v(" "),_c('div',{staticClass:"lastPrice"},[_vm._v(_vm._s(v.last_price.price))]),_vm._v(" "),_c('div',{staticClass:"board"},[_c('div',{staticClass:"bids"},_vm._l((v.bids),function(i){return _c('div',{staticClass:"bid"},[_c('div',{staticClass:"price"},[_vm._v(_vm._s(i[0]))]),_vm._v(" "),_c('div',{staticClass:"amount"},[_vm._v(_vm._s(i[1]))])])})),_vm._v(" "),_c('div',{staticClass:"asks"},_vm._l((v.asks),function(i){return _c('div',{staticClass:"ask"},[_c('div',{staticClass:"price"},[_vm._v(_vm._s(i[0]))]),_vm._v(" "),_c('div',{staticClass:"amount"},[_vm._v(_vm._s(i[1]))])])}))]),_vm._v(" "),_c('div',{staticClass:"trades"},[_c('div',{staticClass:"trade",class:_vm.i.trade_type},[_c('div',{staticClass:"price"},[_vm._v(_vm._s(_vm.i.price))]),_vm._v(" "),_c('div',{staticClass:"amount"},[_vm._v(_vm._s(_vm.i.amount))])])])])}))}
+var staticRenderFns = []
+module.exports = function (_exports) {
+  var options = typeof _exports === 'function'
+    ? _exports.options
+    : _exports
+  options.render = render
+  options.staticRenderFns = staticRenderFns
+  if (false) {
+    api.createRecord("data-v-8cd11e74", options)
+  }
+  return _exports
+}
+var api = null
+if (false) {(function () {
+  api = require("vue-hot-reload-api")
+  api.install(require("vue"))
+  if (!api.compatible) return
+  module.hot.accept()
+  if (module.hot.data) {
+    api.rerender("data-v-8cd11e74", { render: render, staticRenderFns: staticRenderFns })
   }
 })()}
 

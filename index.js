@@ -65,15 +65,16 @@ app.post("/proxy/:url",(req,res)=>{
 
 let clicks=0
 let chat=0
+let connectCount=0
 app.get("/zaif/status",(req,res)=>{
   res.send({
-    clicks,chat
+    clicks,chat,connectivity:1,connectCount
   })
 })
 
 io.on('connection', function (socket) {
   socket.on('zaif', function (data) {
-    io.emit('zaif',{id:data,clicks,chat})
+    io.emit('zaif',{id:data,clicks,chat,connectCount})
     clicks++
   });
   socket.on('chat', function (data) {
@@ -87,15 +88,24 @@ setInterval(()=>{
   chat=0
   io.emit("zaifReset")
 },1000*60)
+setInterval(()=>{
+  connectCount=0
+},1000*60*60)
 
-function connect(){
+function connect(pair){
+  connectCount++
   const WebSocket = require('uws');
 
-  const ws = new WebSocket('ws://ws.zaif.jp/stream?currency_pair=mona_jpy');
+  const ws = new WebSocket('ws://ws.zaif.jp/stream?currency_pair='+pair);
 
   ws.on('open', function open() {
     console.log("Connection established");
   });
+  ws.on('error', function open() {
+    console.log("Connection error");
+    connect(pair)
+  });
+
 
   ws.on('message', function incoming(data) {
     io.emit("zaifMonaJpy",data)
@@ -103,7 +113,10 @@ function connect(){
 
   ws.on('close', function close() {
     console.log('disconnected');
-    connect()
+    connect(pair)
   });
 }
-connect()
+connect("mona_jpy")
+connect("btc_jpy")
+connect("bch_jpy")
+connect("xem_jpy")

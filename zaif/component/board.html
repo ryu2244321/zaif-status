@@ -1,0 +1,26 @@
+<div id="board">
+  <div id="pairs" v-for="(v,k) in b">
+    <div class="pair">{{v.currency_pair}}</div>
+    <div class="lastPrice">{{v.last_price.price}}</div>
+    <div class="board">
+      <div class="bids">
+        <div class="bid" v-for="i in v.bids">
+          <div class="price">{{i[0]}}</div>
+          <div class="amount">{{i[1]}}</div>
+        </div>
+      </div>
+      <div class="asks">
+        <div class="ask" v-for="i in v.asks">
+          <div class="price">{{i[0]}}</div>
+          <div class="amount">{{i[1]}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="trades">
+      <div class="trade" :class="i.trade_type">
+        <div class="price">{{i.price}}</div>
+        <div class="amount">{{i.amount}}</div>
+      </div>
+    </div>
+  </div>
+</div>

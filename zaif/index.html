@@ -6,7 +6,16 @@
     <title>502 Bad Gateway</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div id="tab">
+        <div @click="tab='home'">ホーム</div>
+        <div @click="tab='tweet'">ツイート</div>
+        <div @click="tab='board'">板</div>
+      </div>
+      <home v-show="tab=='home'"></home>
+      <tweet v-show="tab=='tweet'"></tweet>
+      <board v-show="tab=='board'"></board>
+    </div>
     <script src="./dist/vue-2.5.9.js"></script>
     <script src="./dist/dist.js"></script>
   </body>
