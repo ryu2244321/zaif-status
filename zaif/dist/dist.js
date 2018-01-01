@@ -15025,7 +15025,7 @@ exports = module.exports = __webpack_require__(34)(undefined);
 
 
 // module
-exports.push([module.i, "#btns {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  text-align: center;\n  z-index: 10; }\n  #btns .btn {\n    display: inline-block;\n    width: 100px;\n    height: 100px;\n    border-radius: 50px;\n    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.8);\n    margin: 10px;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-color: white; }\n  #btns [data-btnId=\"1\"] {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #btns [data-btnId=\"2\"] {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #btns [data-btnId=\"3\"] {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #btns [data-btnId=\"4\"] {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #btns #chatInput {\n    display: grid;\n    grid-template-columns: 1fr 3fr 80px;\n    height: 20px; }\n    #btns #chatInput input {\n      width: 100%;\n      height: 20px;\n      font-size: 20px; }\n    #btns #chatInput #sendBtn {\n      color: #fff;\n      background-color: #2196f3; }\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  -ms-user-select: text; }\n\n#balloons {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 100px;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  z-index: 5; }\n  #balloons .balloon.b1 {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #balloons .balloon.b2 {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #balloons .balloon.b3 {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #balloons .balloon.b4 {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #balloons .balloon {\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat; }\n\n#clicks {\n  position: absolute;\n  top: 0;\n  right: 0;\n  text-align: right;\n  z-index: 10; }\n\n#chats {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  display: table; }\n  #chats .chat:nth-child(2n) {\n    background-color: #ddd; }\n  #chats .chat {\n    display: table-row; }\n    #chats .chat .name {\n      display: table-cell;\n      max-width: 80px;\n      overflow: hidden;\n      white-space: nowrap;\n      word-wrap: normal;\n      word-break: break-word;\n      text-overflow: ellipsis; }\n    #chats .chat .text {\n      display: table-cell; }\n\n#tab {\n  z-index: 101; }\n  #tab div {\n    display: inline-block; }\n\n#board {\n  font-size: 15px; }\n  #board .pairs {\n    display: inline-block;\n    border: 1px solid #12a;\n    border-radius: 10px; }\n    #board .pairs .pair {\n      text-align: center; }\n    #board .pairs .lastPrice {\n      text-align: center;\n      font-size: 0.8em;\n      color: #888; }\n    #board .pairs .ask .price {\n      color: red; }\n    #board .pairs .bid .price {\n      color: green; }\n  #board .price, #board .amount {\n    width: 70px;\n    display: inline-block; }\n  #board .board {\n    vertical-align: top;\n    display: inline-block;\n    border: 1px solid #840; }\n  #board .trades {\n    vertical-align: top;\n    display: inline-block;\n    border: 1px solid #4e3; }\n", ""]);
+exports.push([module.i, "#btns {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  text-align: center;\n  z-index: 10; }\n  #btns .btn {\n    display: inline-block;\n    width: 100px;\n    height: 100px;\n    border-radius: 50px;\n    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.8);\n    margin: 10px;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-color: white; }\n  #btns [data-btnId=\"1\"] {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #btns [data-btnId=\"2\"] {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #btns [data-btnId=\"3\"] {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #btns [data-btnId=\"4\"] {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #btns #chatInput {\n    display: grid;\n    grid-template-columns: 1fr 3fr 80px;\n    height: 20px; }\n    #btns #chatInput input {\n      width: 100%;\n      height: 20px;\n      font-size: 20px; }\n    #btns #chatInput #sendBtn {\n      color: #fff;\n      background-color: #2196f3; }\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  -ms-user-select: text; }\n\n#balloons {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  z-index: 5; }\n  #balloons .balloon.b1 {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #balloons .balloon.b2 {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #balloons .balloon.b3 {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #balloons .balloon.b4 {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #balloons .balloon {\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat; }\n\n#clicks {\n  position: absolute;\n  top: 0;\n  right: 0;\n  text-align: right;\n  z-index: 10; }\n\n#tweet, #board {\n  margin-top: 50px; }\n\n#chats {\n  position: absolute;\n  top: 10%;\n  left: 0;\n  width: 90%;\n  display: table; }\n  #chats .chat:nth-child(2n) {\n    background-color: #ddd; }\n  #chats .chat {\n    display: table-row; }\n    #chats .chat .name {\n      display: table-cell;\n      max-width: 80px;\n      overflow: hidden;\n      white-space: nowrap;\n      word-wrap: normal;\n      word-break: break-word;\n      text-overflow: ellipsis; }\n    #chats .chat .text {\n      display: table-cell; }\n\n#tab {\n  z-index: 101;\n  position: absolute;\n  top: 0; }\n  #tab div {\n    display: inline-block;\n    padding: 10px;\n    margin: 5px;\n    background-color: #6db6ff;\n    color: white; }\n\n#board {\n  font-size: 15px; }\n  #board .pairs {\n    display: inline-block;\n    border: 1px solid #12a;\n    border-radius: 10px; }\n    #board .pairs .pair {\n      text-align: center; }\n    #board .pairs .lastPrice {\n      text-align: center;\n      font-size: 0.8em;\n      color: #888; }\n    #board .pairs .ask .price {\n      color: red; }\n    #board .pairs .bid .price {\n      color: green; }\n  #board .price, #board .amount {\n    width: 70px;\n    display: inline-block; }\n  #board .board {\n    vertical-align: top;\n    display: inline-block;\n    border: 1px solid #840; }\n  #board .trades {\n    vertical-align: top;\n    display: inline-block;\n    border: 1px solid #4e3; }\n", ""]);
 
 // exports
 
@@ -19273,7 +19273,7 @@ module.exports=__webpack_require__(65)({
 /* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("ツイートする")]),_vm._v(" "),_vm._l((_vm.tweets),function(i){return _c('div',[_c('a',{attrs:{"target":"_blank","href":'https://twitter.com/share?url=https://zaif-status.herokuapp.com/zaif&text='+i}},[_vm._v(_vm._s(i))])])})],2)}
+var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"tweet"}},[_c('h1',[_vm._v("ツイートする")]),_vm._v(" "),_vm._l((_vm.tweets),function(i){return _c('div',[_c('a',{attrs:{"target":"_blank","href":'https://twitter.com/share?url=https://zaif-status.herokuapp.com/zaif&text='+i}},[_vm._v(_vm._s(i))])])})],2)}
 var staticRenderFns = []
 module.exports = function (_exports) {
   var options = typeof _exports === 'function'
@@ -19317,13 +19317,13 @@ module.exports=__webpack_require__(67)({
       
       if(this.sound[c.currency_pair]){
         if(this.lastAmt[c.currency_pair]===c.trades[0].amount){
-          (new Audio(__webpack_require__(70))).play()
+          (new Audio(__webpack_require__(68))).play()
         } else if(this.ignore[c.currency_pair]>c.trades[0].amount){
           console.log("ignore");
-          (new Audio(__webpack_require__(68))).play()
+          (new Audio(__webpack_require__(69))).play()
         }else{
           console.log("yabami");
-          (new Audio(__webpack_require__(69))).play()
+          (new Audio(__webpack_require__(70))).play()
         }
       }
       this.lastAmt[c.currency_pair]=c.trades[0].amount
@@ -19377,19 +19377,19 @@ if (false) {(function () {
 /* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "dist/assets/f7a5cbe1a0bd7982c2f612745cb22627.mp3";
+module.exports = __webpack_require__.p + "dist/assets/afbf57786cf2b915c9e413dfc8498fe7.mp3";
 
 /***/ }),
 /* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "dist/assets/4276ce729a3fad5656d39b9c9a2404e5.mp3";
+module.exports = __webpack_require__.p + "dist/assets/f7a5cbe1a0bd7982c2f612745cb22627.mp3";
 
 /***/ }),
 /* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "dist/assets/afbf57786cf2b915c9e413dfc8498fe7.mp3";
+module.exports = __webpack_require__.p + "dist/assets/4276ce729a3fad5656d39b9c9a2404e5.mp3";
 
 /***/ })
 /******/ ]);
