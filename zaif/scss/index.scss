@@ -117,3 +117,42 @@ html,body{
     
   }
 }
+#board{
+  font-size:15px;
+  
+  .pairs{
+    display:inline-block;
+    border:1px solid #12a;
+    border-radius:10px;
+    .pair{
+      text-align:center;
+    }
+    .lastPrice{
+      text-align:center;
+      font-size:0.8em;
+      color: #888;
+    }
+    .ask{
+      .price{
+        color: red;
+      }
+    }
+    .bid .price{
+      color:green
+    }
+  }
+  .price , .amount{
+    width:70px;
+    display:inline-block;
+  }
+  .board{
+    vertical-align: top;
+    display:inline-block;
+    border:1px solid #840;
+  }
+  .trades{
+    vertical-align: top;
+    display:inline-block;
+    border:1px solid #4e3;
+  }
+}

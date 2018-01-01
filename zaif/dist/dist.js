@@ -15025,7 +15025,7 @@ exports = module.exports = __webpack_require__(34)(undefined);
 
 
 // module
-exports.push([module.i, "#btns {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  text-align: center;\n  z-index: 10; }\n  #btns .btn {\n    display: inline-block;\n    width: 100px;\n    height: 100px;\n    border-radius: 50px;\n    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.8);\n    margin: 10px;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-color: white; }\n  #btns [data-btnId=\"1\"] {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #btns [data-btnId=\"2\"] {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #btns [data-btnId=\"3\"] {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #btns [data-btnId=\"4\"] {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #btns #chatInput {\n    display: grid;\n    grid-template-columns: 1fr 3fr 80px;\n    height: 20px; }\n    #btns #chatInput input {\n      width: 100%;\n      height: 20px;\n      font-size: 20px; }\n    #btns #chatInput #sendBtn {\n      color: #fff;\n      background-color: #2196f3; }\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  -ms-user-select: text; }\n\n#balloons {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 100px;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  z-index: 5; }\n  #balloons .balloon.b1 {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #balloons .balloon.b2 {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #balloons .balloon.b3 {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #balloons .balloon.b4 {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #balloons .balloon {\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat; }\n\n#clicks {\n  position: absolute;\n  top: 0;\n  right: 0;\n  text-align: right;\n  z-index: 10; }\n\n#chats {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  display: table; }\n  #chats .chat:nth-child(2n) {\n    background-color: #ddd; }\n  #chats .chat {\n    display: table-row; }\n    #chats .chat .name {\n      display: table-cell;\n      max-width: 80px;\n      overflow: hidden;\n      white-space: nowrap;\n      word-wrap: normal;\n      word-break: break-word;\n      text-overflow: ellipsis; }\n    #chats .chat .text {\n      display: table-cell; }\n\n#tab {\n  z-index: 101; }\n  #tab div {\n    display: inline-block; }\n", ""]);
+exports.push([module.i, "#btns {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  text-align: center;\n  z-index: 10; }\n  #btns .btn {\n    display: inline-block;\n    width: 100px;\n    height: 100px;\n    border-radius: 50px;\n    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.8);\n    margin: 10px;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-color: white; }\n  #btns [data-btnId=\"1\"] {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #btns [data-btnId=\"2\"] {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #btns [data-btnId=\"3\"] {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #btns [data-btnId=\"4\"] {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #btns #chatInput {\n    display: grid;\n    grid-template-columns: 1fr 3fr 80px;\n    height: 20px; }\n    #btns #chatInput input {\n      width: 100%;\n      height: 20px;\n      font-size: 20px; }\n    #btns #chatInput #sendBtn {\n      color: #fff;\n      background-color: #2196f3; }\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  -ms-user-select: text; }\n\n#balloons {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 100px;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  z-index: 5; }\n  #balloons .balloon.b1 {\n    background-image: url(" + __webpack_require__(12) + "); }\n  #balloons .balloon.b2 {\n    background-image: url(" + __webpack_require__(13) + "); }\n  #balloons .balloon.b3 {\n    background-image: url(" + __webpack_require__(14) + "); }\n  #balloons .balloon.b4 {\n    background-image: url(" + __webpack_require__(15) + "); }\n  #balloons .balloon {\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat; }\n\n#clicks {\n  position: absolute;\n  top: 0;\n  right: 0;\n  text-align: right;\n  z-index: 10; }\n\n#chats {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  display: table; }\n  #chats .chat:nth-child(2n) {\n    background-color: #ddd; }\n  #chats .chat {\n    display: table-row; }\n    #chats .chat .name {\n      display: table-cell;\n      max-width: 80px;\n      overflow: hidden;\n      white-space: nowrap;\n      word-wrap: normal;\n      word-break: break-word;\n      text-overflow: ellipsis; }\n    #chats .chat .text {\n      display: table-cell; }\n\n#tab {\n  z-index: 101; }\n  #tab div {\n    display: inline-block; }\n\n#board {\n  font-size: 15px; }\n  #board .pairs {\n    display: inline-block;\n    border: 1px solid #12a;\n    border-radius: 10px; }\n    #board .pairs .pair {\n      text-align: center; }\n    #board .pairs .lastPrice {\n      text-align: center;\n      font-size: 0.8em;\n      color: #888; }\n    #board .pairs .ask .price {\n      color: red; }\n    #board .pairs .bid .price {\n      color: green; }\n  #board .price, #board .amount {\n    width: 70px;\n    display: inline-block; }\n  #board .board {\n    vertical-align: top;\n    display: inline-block;\n    border: 1px solid #840; }\n  #board .trades {\n    vertical-align: top;\n    display: inline-block;\n    border: 1px solid #4e3; }\n", ""]);
 
 // exports
 
@@ -15616,10 +15616,10 @@ module.exports=__webpack_require__(63)({
         this.chats.shift()
       }
     })
-    socket.on("zaifMonaJpy",d=>{
+    socket.on("zaifBoard",d=>{
       
       this.monaJpy=JSON.parse(d)
-      console.log(this.monaJpy)
+      
     })
   },
   methods:{
@@ -19233,7 +19233,7 @@ Backoff.prototype.setJitter = function(jitter){
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"wrap"}},[_c('div',{attrs:{"id":"btns"}},[_c('div',{staticClass:"btn",attrs:{"data-btnId":"1"},on:{"click":function($event){_vm.send(1)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"2"},on:{"click":function($event){_vm.send(2)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"3"},on:{"click":function($event){_vm.send(3)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"4"},on:{"click":function($event){_vm.send(4)}}}),_vm._v(" "),_c('div',{attrs:{"id":"chatInput"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.nameInput),expression:"nameInput"}],attrs:{"name":"nameInput","type":"text","placeholder":"名前"},domProps:{"value":(_vm.nameInput)},on:{"input":function($event){if($event.target.composing){ return; }_vm.nameInput=$event.target.value}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.chatInput),expression:"chatInput"}],attrs:{"name":"chatInput","type":"text","placeholder":"本文"},domProps:{"value":(_vm.chatInput)},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.sendChat($event)},"input":function($event){if($event.target.composing){ return; }_vm.chatInput=$event.target.value}}}),_vm._v(" "),_c('div',{attrs:{"id":"sendBtn"},on:{"click":_vm.sendChat}},[_vm._v("送信")])])]),_vm._v(" "),_c('div',{attrs:{"id":"balloons"}},_vm._l((_vm.balloons),function(b){return _c('div',{staticClass:"balloon",class:'b'+b.id,style:({left:b.left+'px',top:b.top+'px'})})})),_vm._v(" "),_c('div',{attrs:{"id":"clicks"}},[_vm._v(_vm._s(_vm.clicks)+"クリック/分,"+_vm._s(_vm.monaJpy.last_price.price)+","+_vm._s(_vm.monaJpy.last_price.action))]),_vm._v(" "),_c('div',{attrs:{"id":"chats"}},_vm._l((_vm.chats),function(c){return _c('div',{staticClass:"chat"},[_c('div',{staticClass:"name"},[_vm._v(_vm._s(c.name))]),_vm._v(" "),_c('div',{staticClass:"text"},[_vm._v(_vm._s(c.text))])])}))])}
+var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"wrap"}},[_c('div',{attrs:{"id":"btns"}},[_c('div',{staticClass:"btn",attrs:{"data-btnId":"1"},on:{"click":function($event){_vm.send(1)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"2"},on:{"click":function($event){_vm.send(2)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"3"},on:{"click":function($event){_vm.send(3)}}}),_vm._v(" "),_c('div',{staticClass:"btn",attrs:{"data-btnId":"4"},on:{"click":function($event){_vm.send(4)}}}),_vm._v(" "),_c('div',{attrs:{"id":"chatInput"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.nameInput),expression:"nameInput"}],attrs:{"name":"nameInput","type":"text","placeholder":"名前"},domProps:{"value":(_vm.nameInput)},on:{"input":function($event){if($event.target.composing){ return; }_vm.nameInput=$event.target.value}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.chatInput),expression:"chatInput"}],attrs:{"name":"chatInput","type":"text","placeholder":"本文"},domProps:{"value":(_vm.chatInput)},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.sendChat($event)},"input":function($event){if($event.target.composing){ return; }_vm.chatInput=$event.target.value}}}),_vm._v(" "),_c('div',{attrs:{"id":"sendBtn"},on:{"click":_vm.sendChat}},[_vm._v("送信")])])]),_vm._v(" "),_c('div',{attrs:{"id":"balloons"}},_vm._l((_vm.balloons),function(b){return _c('div',{staticClass:"balloon",class:'b'+b.id,style:({left:b.left+'px',top:b.top+'px'})})})),_vm._v(" "),_c('div',{attrs:{"id":"clicks"}},[_vm._v(_vm._s(_vm.clicks)+"クリック/分,"+_vm._s(_vm.monaJpy.currency_pair)+_vm._s(_vm.monaJpy.last_price.price)+","+_vm._s(_vm.monaJpy.last_price.action))]),_vm._v(" "),_c('div',{attrs:{"id":"chats"}},_vm._l((_vm.chats),function(c){return _c('div',{staticClass:"chat"},[_c('div',{staticClass:"name"},[_vm._v(_vm._s(c.name))]),_vm._v(" "),_c('div',{staticClass:"text"},[_vm._v(_vm._s(c.text))])])}))])}
 var staticRenderFns = []
 module.exports = function (_exports) {
   var options = typeof _exports === 'function'
@@ -19305,22 +19305,50 @@ if (false) {(function () {
 const socket = __webpack_require__(16)
 module.exports=__webpack_require__(67)({
   data:()=>({
-    b:{}
+    b:{},
+    sound:{},
+    ignore:{},
+    lastAmt:{}
   }),
   mounted(){
     socket.on("zaifBoard",d=>{
       const c=JSON.parse(d)
       this.$set(this.b,c.currency_pair,c)
+      
+      if(this.sound[c.currency_pair]){
+        if(this.lastAmt[c.currency_pair]===c.trades[0].amount){
+          (new Audio(__webpack_require__(70))).play()
+        } else if(this.ignore[c.currency_pair]>c.trades[0].amount){
+          console.log("ignore");
+          (new Audio(__webpack_require__(68))).play()
+        }else{
+          console.log("yabami");
+          (new Audio(__webpack_require__(69))).play()
+        }
+      }
+      this.lastAmt[c.currency_pair]=c.trades[0].amount
+    })
+    socket.on("reconnection",d=>{
+      console.log("Reconnected")
     })
   }
 })
+
+
+
+
+
+
+
+
+
 
 
 /***/ }),
 /* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"board"}},_vm._l((_vm.b),function(v,k){return _c('div',{attrs:{"id":"pairs"}},[_c('div',{staticClass:"pair"},[_vm._v(_vm._s(v.currency_pair))]),_vm._v(" "),_c('div',{staticClass:"lastPrice"},[_vm._v(_vm._s(v.last_price.price))]),_vm._v(" "),_c('div',{staticClass:"board"},[_c('div',{staticClass:"bids"},_vm._l((v.bids),function(i){return _c('div',{staticClass:"bid"},[_c('div',{staticClass:"price"},[_vm._v(_vm._s(i[0]))]),_vm._v(" "),_c('div',{staticClass:"amount"},[_vm._v(_vm._s(i[1]))])])})),_vm._v(" "),_c('div',{staticClass:"asks"},_vm._l((v.asks),function(i){return _c('div',{staticClass:"ask"},[_c('div',{staticClass:"price"},[_vm._v(_vm._s(i[0]))]),_vm._v(" "),_c('div',{staticClass:"amount"},[_vm._v(_vm._s(i[1]))])])}))]),_vm._v(" "),_c('div',{staticClass:"trades"},[_c('div',{staticClass:"trade",class:_vm.i.trade_type},[_c('div',{staticClass:"price"},[_vm._v(_vm._s(_vm.i.price))]),_vm._v(" "),_c('div',{staticClass:"amount"},[_vm._v(_vm._s(_vm.i.amount))])])])])}))}
+var render = function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"board"}},_vm._l((_vm.b),function(v){return _c('div',{staticClass:"pairs"},[_c('span',{staticClass:"pair",on:{"click":function($event){_vm.sound[v.currency_pair]=!_vm.sound[v.currency_pair]}}},[_vm._v(_vm._s(v.currency_pair))]),_vm._v(" "),_c('span',{staticClass:"lastPrice"},[_vm._v(_vm._s(v.last_price.price))]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.ignore[v.currency_pair]),expression:"ignore[v.currency_pair]"}],attrs:{"type":"text"},domProps:{"value":(_vm.ignore[v.currency_pair])},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.ignore, v.currency_pair, $event.target.value)}}}),_vm._v(" "),_c('span',{directives:[{name:"show",rawName:"v-show",value:(_vm.sound[v.currency_pair]),expression:"sound[v.currency_pair]"}]},[_vm._v("ON")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('div',{staticClass:"board"},[_c('div',{staticClass:"bids"},_vm._l((v.bids),function(i){return _c('div',{staticClass:"bid"},[_c('div',{staticClass:"price"},[_vm._v(_vm._s(i[0]))]),_vm._v(" "),_c('div',{staticClass:"amount"},[_vm._v(_vm._s(i[1]))])])})),_vm._v(" "),_c('div',{staticClass:"asks"},_vm._l((v.asks),function(i){return _c('div',{staticClass:"ask"},[_c('div',{staticClass:"price"},[_vm._v(_vm._s(i[0]))]),_vm._v(" "),_c('div',{staticClass:"amount"},[_vm._v(_vm._s(i[1]))])])}))]),_vm._v(" "),_c('div',{staticClass:"trades"},_vm._l((v.trades),function(i){return _c('div',{staticClass:"trade",class:i.trade_type},[_c('div',{staticClass:"price"},[_vm._v(_vm._s(i.price))]),_vm._v(" "),_c('div',{staticClass:"amount"},[_vm._v(_vm._s(i.amount))])])}))])}))}
 var staticRenderFns = []
 module.exports = function (_exports) {
   var options = typeof _exports === 'function'
@@ -19344,6 +19372,24 @@ if (false) {(function () {
   }
 })()}
 
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "dist/assets/f7a5cbe1a0bd7982c2f612745cb22627.mp3";
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "dist/assets/4276ce729a3fad5656d39b9c9a2404e5.mp3";
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "dist/assets/afbf57786cf2b915c9e413dfc8498fe7.mp3";
 
 /***/ })
 /******/ ]);

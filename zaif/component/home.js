@@ -31,10 +31,10 @@ module.exports=require("./home.html")({
         this.chats.shift()
       }
     })
-    socket.on("zaifMonaJpy",d=>{
+    socket.on("zaifBoard",d=>{
       
       this.monaJpy=JSON.parse(d)
-      console.log(this.monaJpy)
+      
     })
   },
   methods:{

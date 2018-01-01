@@ -41,7 +41,7 @@ module.exports = {
         test: /\.html$/,
         use: 'vue-template-loader'
       },{
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/,
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|mp3)$/,
         use: [
           {
             loader: 'file-loader',

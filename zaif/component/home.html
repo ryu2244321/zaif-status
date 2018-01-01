@@ -15,7 +15,7 @@
     <div class="balloon" v-for="b in balloons" :class="'b'+b.id"
          :style="{left:b.left+'px',top:b.top+'px'}"></div>
   </div>
-  <div id="clicks">{{clicks}}クリック/分,{{monaJpy.last_price.price}},{{monaJpy.last_price.action}}</div>
+  <div id="clicks">{{clicks}}クリック/分,{{monaJpy.currency_pair}}{{monaJpy.last_price.price}},{{monaJpy.last_price.action}}</div>
   <div id="chats">
     <div class="chat" v-for="c in chats">
       <div class="name">{{c.name}}</div>

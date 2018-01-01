@@ -97,7 +97,7 @@ function connect(pair){
   const WebSocket = require('uws');
 
   const ws = new WebSocket('ws://ws.zaif.jp/stream?currency_pair='+pair);
-
+  io.emit("reconnection",pair)
   ws.on('open', function open() {
     console.log("Connection established");
   });
@@ -108,7 +108,7 @@ function connect(pair){
 
 
   ws.on('message', function incoming(data) {
-    io.emit("zaifMonaJpy",data)
+    io.emit("zaifBoard",data)
   });
 
   ws.on('close', function close() {
