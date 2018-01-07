@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static('./'))
-app.get("/proxy/:url",(req,res)=>{
+app.get("/proxy/:url?",(req,res)=>{
   axios.get(req.query.u||req.params.url).then(r=>{
     //console.log(r)
     res.status(r.status).set(r.headers).send(r.data)
@@ -42,7 +42,7 @@ app.get("/proxy/:url",(req,res)=>{
   })
 })
 
-app.post("/proxy/:url",(req,res)=>{
+app.post("/proxy/:url?",(req,res)=>{
   let payload="";
   for(let v in req.body){
     if(req.body[v]){
