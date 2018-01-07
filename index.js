@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 
 app.use(express.static('./'))
 app.get("/proxy/:url",(req,res)=>{
-  axios.get(req.params.url).then(r=>{
+  axios.get(req.query.u||req.params.url).then(r=>{
     //console.log(r)
     res.status(r.status).set(r.headers).send(r.data)
   }).catch(e=>{
@@ -49,7 +49,7 @@ app.post("/proxy/:url",(req,res)=>{
       payload+=encodeURIComponent(v)+"="+encodeURIComponent(req.body[v])+"&"
     }
   }
-  axios.post(req.params.url,payload.slice(0,-1)).then(r=>{
+  axios.post(req.query.u||req.params.url,payload.slice(0,-1)).then(r=>{
     console.log(req.params,payload)
     res.status(r.status).set(r.headers).send(r.data)
   }).catch(e=>{
