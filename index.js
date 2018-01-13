@@ -62,6 +62,31 @@ app.post("/proxy/:url?",(req,res)=>{
     }
   })
 })
+const tokens=[
+  {
+    description:"スキャムガールズ",
+    asset:"SCAMGIRLS",
+    assetCommonName:"SCAMGIRLS",
+    assetLongName:null,
+    cardName:"Scam Girls",
+    imageUrl:"",
+    ownerName:"ゆき@エコビー",
+    twitterId:"",
+    twitterScreenName:"MissMonacoin",
+    timestamp:1
+  }
+]
+app.get("/scamgirls/api/detail",(req,res)=>{
+  const assets=req.query.assets.split(",")
+  const result=assets.map(v=>{
+    for (let i = 0; i < tokens.length; i++) {
+      if (tokens[i].assetCommonName===v) {
+        return tokens[i]
+      }
+    }
+  })
+  return res.send({success:true,result})
+})
 
 let clicks=0
 let chat=0
