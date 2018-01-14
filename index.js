@@ -69,7 +69,18 @@ const tokens=[
     assetCommonName:"SCAMGIRLS",
     assetLongName:null,
     cardName:"Scam Girls",
-    imageUrl:"",
+    imageUrl:"https://zaif-status.herokuapp.com/scamgirls/images/scamgirls.png",
+    ownerName:"ゆき@エコビー",
+    twitterId:"",
+    twitterScreenName:"MissMonacoin",
+    timestamp:1
+  },{
+    description:"票",
+    asset:"A2233845812365203064",
+    assetCommonName:"SCAMGIRLS.HYOU",
+    assetLongName:"SCAMGIRLS.HYOU",
+    cardName:"票",
+    imageUrl:"https://zaif-status.herokuapp.com/scamgirls/images/hyou.png",
     ownerName:"ゆき@エコビー",
     twitterId:"",
     twitterScreenName:"MissMonacoin",
@@ -78,10 +89,11 @@ const tokens=[
 ]
 app.get("/scamgirls/api/detail",(req,res)=>{
   const assets=req.query.assets.split(",")
-  const result=assets.map(v=>{
+  const result=[];
+  assets.forEach(v=>{
     for (let i = 0; i < tokens.length; i++) {
       if (tokens[i].assetCommonName===v) {
-        return tokens[i]
+        result.push( tokens[i])
       }
     }
   })
