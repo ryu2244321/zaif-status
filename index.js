@@ -1,6 +1,7 @@
 const http = require("http")
 const express = require("express")
 const axios = require("axios")
+const {URL} = require("url")
 const app = express()
 
 const bodyParser = require('body-parser');
@@ -27,6 +28,16 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static('./'))
+
+const allowedDomains = ["explorer.fujicoin.org","www.coingecko.com","api.zaif.jp"]
+function isValidDomain(addr){
+  const url = new URL(addr)
+  if(~allowedDomains.indexOf(url.hostname)){
+    return true
+  }
+  return false
+}
+
 app.get("/proxy/:url?",(req,res)=>{
   axios.get(req.query.u||req.params.url).then(r=>{
     //console.log(r)
@@ -49,7 +60,11 @@ app.post("/proxy/:url?",(req,res)=>{
       payload+=encodeURIComponent(v)+"="+encodeURIComponent(req.body[v])+"&"
     }
   }
-  axios.post(req.query.u||req.params.url,payload.slice(0,-1)).then(r=>{
+  const url = req.query.u||req.params.url
+  if(!isValidDomain(url)){
+    return res.status(510).send({success:false,reason:"not allowed"})
+  }
+  axios.post(url,payload.slice(0,-1)).then(r=>{
     console.log(req.params,payload)
     res.status(r.status).set(r.headers).send(r.data)
   }).catch(e=>{
@@ -99,61 +114,3 @@ app.get("/scamgirls/api/detail",(req,res)=>{
   })
   return res.send({success:true,result})
 })
-
-let clicks=0
-let chat=0
-let connectCount=0
-app.get("/zaif/status",(req,res)=>{
-  res.send({
-    clicks,chat,connectivity:1,connectCount
-  })
-})
-
-io.on('connection', function (socket) {
-  socket.on('zaif', function (data) {
-    io.emit('zaif',{id:data,clicks,chat,connectCount})
-    clicks++
-  });
-  socket.on('chat', function (data) {
-    io.emit('chat',data)
-    chat++
-  });
-});
-
-setInterval(()=>{
-  clicks=0
-  chat=0
-  io.emit("zaifReset")
-},1000*60)
-setInterval(()=>{
-  connectCount=0
-},1000*60*60)
-
-function connect(pair){
-  connectCount++
-  const WebSocket = require('uws');
-
-  const ws = new WebSocket('ws://ws.zaif.jp/stream?currency_pair='+pair);
-  io.emit("reconnection",pair)
-  ws.on('open', function open() {
-    console.log("Connection established");
-  });
-  ws.on('error', function open() {
-    console.log("Connection error");
-    connect(pair)
-  });
-
-
-  ws.on('message', function incoming(data) {
-    io.emit("zaifBoard",data)
-  });
-
-  ws.on('close', function close() {
-    console.log('disconnected');
-    connect(pair)
-  });
-}
-connect("mona_jpy")
-connect("btc_jpy")
-connect("bch_jpy")
-connect("xem_jpy")
